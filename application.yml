@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: Application
 metadata:
   name: iot-argo-app
-  namespace: app
 spec:
   replicas: 1
   selector:
