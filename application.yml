@@ -3,6 +3,8 @@ apiVersion: apps/v1
 kind: Application
 metadata:
   name: iot-argo-app
+  labels:
+    app: iot-argo-app
 spec:
   replicas: 1
   selector:
@@ -25,6 +27,7 @@ kind: Service
 metadata:
   name: iot-argo-service
 spec:
+  type: NodePort
   selector:
     app: iot-argo-app
   ports:
