@@ -29,7 +29,6 @@ spec:
   selector:
     app: iot-argo-app
   ports:
-    - nodePort: 308888
-      protocol: TCP
+    - protocol: TCP
       port: 8888
       targetPort: 8888
