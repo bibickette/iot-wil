@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-iot-p3
-  namespace: iot-argo
+  namespace: dev
 spec:
   ingressClassName: traefik
   rules:
