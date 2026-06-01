@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-iot-p3
+  name: ingress-wil-app
   namespace: dev
 spec:
   ingressClassName: traefik
@@ -12,6 +12,6 @@ spec:
             path: /
             backend:
               service:
-                name: iot-argo-service 
+                name: wil-app-hub-service 
                 port:
                   number: 8888
