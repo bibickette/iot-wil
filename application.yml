@@ -2,17 +2,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: iot-argo-app
+  name: wil-app-hub
   namespace: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: iot-argo-app
+      app: wil-app-hub
   template:
     metadata:
       labels:
-        app: iot-argo-app
+        app: wil-app-hub
     spec:
       containers:
         - name: app
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: iot-argo-service
+  name: wil-app-hub-service
   namespace: dev
 spec:
   selector:
-    app: iot-argo-app
+    app: wil-app-hub
   ports:
     - protocol: TCP
       port: 8888
