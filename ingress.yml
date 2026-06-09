@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: wil.github.localhost
+    - host: localhost
       http:
         paths:
           - pathType: Prefix
